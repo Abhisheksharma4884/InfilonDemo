@@ -1,18 +1,18 @@
 const initialState = {
-    tableData: []
+  tableData: []
 }
 
-const rootReducer = (state=initialState, action) => {
-    const newState = {...state};
+const rootReducer = (state = initialState, action) => {
+  const newState = { ...state }
 
-    switch(action.type){
-        case 'GET_TABLE_DATA_ASYNC':
-            newState.tableData = action.payload.data;
-            break;
-        default: break;
-    }
+  switch (action.type) {
+    case 'GET_TABLE_DATA_ASYNC':
+      newState.tableData = action.payload.data
+      break
+    default: break
+  }
 
-    return newState
+  return newState
 }
 
-export default rootReducer;
+export default rootReducer
